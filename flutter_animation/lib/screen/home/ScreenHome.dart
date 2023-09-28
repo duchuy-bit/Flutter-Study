@@ -1,6 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/screen/home/components/DynamicIsland.dart';
 import 'package:flutter_animation/screen/home/components/Header.dart';
+import 'package:flutter_animation/screen/home/components/ListCategories.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,17 +34,23 @@ class HomeUI extends StatefulWidget {
 class _HomeUIState extends State<HomeUI> {
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
-        const HeaderHome(),
-        headerMenu(),
+        Stack(
+          children: [
+            const HeaderHome(),
+            headerMenu(),
+          ],
+        ),
+        const ListCategories(),
+        const Expanded(child: Text("hello"))
       ],
     );
   }
 
   Widget headerMenu() => SafeArea(
         child: Container(
-          padding: EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10),
           // decoration: BoxDecoration(color: Colors.pink),
           height: 50,
           // width: MediaQuery.of(context).size.width,

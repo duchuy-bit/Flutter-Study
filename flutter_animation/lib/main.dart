@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       // statusBarBrightness: Brightness.dark,
     ));
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       // theme: ThemeData(),
-      theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -48,7 +48,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       // appBar: AppBar(
       //     // backgroundColor: Colors.white,
       //     // statusBarColor: Colors.red,
@@ -57,8 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //     // statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
       //     // statusBarBrightness: Brightness.light, // For iOS (dark icons)
       //     ),
-      body: Container(
-          decoration: BoxDecoration(color: Colors.white), child: HomeScreen()),
+      body: HomeScreen(),
     );
   }
 }

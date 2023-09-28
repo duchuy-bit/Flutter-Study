@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/screen/home/components/ButtonType.dart';
 
@@ -82,7 +84,6 @@ class _HeaderHomeState extends State<HeaderHome> {
     );
   }
 }
-
 
 class CurvedPainter extends CustomPainter {
   @override

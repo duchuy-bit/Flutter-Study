@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -12,7 +14,7 @@ class ButtonTypeInHome extends StatefulWidget {
 class _ButtonTypeInHomeState extends State<ButtonTypeInHome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -51,7 +53,7 @@ class ItemButtonType extends StatelessWidget {
           height: 70,
           width: 70,
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 192, 228, 255).withOpacity(0.4),
+            color: const Color.fromARGB(255, 192, 228, 255).withOpacity(0.4),
           ),
           child: Center(child: Icon(icon, color: Colors.white, size: 38)),
           // child: Text(text),
